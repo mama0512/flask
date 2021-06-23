@@ -26,18 +26,18 @@ string = ' '.join(cut)
 print(len(string))
 
 img = Image.open(r'./static/assets/img/tree.jpg')  # 打开遮罩图片
+
 img_array = np.array(img)  # 将图片转换为数组
+# print(string)
 wc = WordCloud(
 
     background_color="white",  # 背景色为白色
-    height = 4000,  # 高度设置为400
-    width = 8000,  # 宽度设置为800
-    scale = 20,  # 长宽拉伸程度程度设置为20
-    prefer_horizontal = 0.9999,
     mask = img_array,  # 添加蒙版
-    font_path="/System/Library/fonts/PingFang.ttc"  # 字体所在位置：C:\Windows\Fonts
+    font_path="/System/Library/fonts/PingFang.ttc"
 )
-wc.generate(string)
+wc.generate_from_text(string)
+print('打开成功')
+# wc.generate(string)
 
 # 绘制图片
 fig = plt.figure(1)

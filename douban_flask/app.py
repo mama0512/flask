@@ -1,10 +1,13 @@
 from flask import Flask, render_template
 import sqlite3
 import jieba
+import os
 
 app = Flask(__name__)
 
 
+mydir =os.path.join(os.path.abspath(os.path.dirname(__file__)),'movie.db')
+print(mydir)
 @app.route('/')
 def index():
     con = sqlite3.connect('movie.db')
@@ -35,7 +38,7 @@ def home():
 @app.route('/movie')
 def movie():
     data_list = list()
-    con = sqlite3.connect("movie.db")
+    con = sqlite3.connect(mydir)
     cur = con.cursor()
     sql = "select * from movie250"
     data = cur.execute(sql)
@@ -52,7 +55,7 @@ def score():
     score = list()  # 评分
     num = list()  # 电影数量
     num1= list()  #评价数量
-    con = sqlite3.connect("movie.db")
+    con = sqlite3.connect(mydir)
     cur = con.cursor()
     sql = "select score,count(score) from movie250 group by score"
     data = cur.execute(sql)

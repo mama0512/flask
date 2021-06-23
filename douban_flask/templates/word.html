@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+
+    <!-- ======= About Us Section ======= -->
+    <section id="about" class="about">
+        <div class="container">
+
+            <div class="row no-gutters">
+                <div class="col-lg-6 video-box">
+                    {#                    <img src="static/assets/img/word.jpg" class="img-fluid" alt="">#}
+                    <img src="{{ url_for('static', filename='assets/img/word.jpg') }}" class="img-fluid" alt="">
+
+                </div>
+
+                <div class="col-lg-6 d-flex flex-column justify-content-center about-content">
+
+                    <div class="section-title">
+                        <h2>词云</h2>
+                        <p>高频的电影描述生成词云，更加清晰地了解经典电影</p>
+                    </div>
+
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bx-fingerprint"></i></div>
+                        <h4 class="title"><a href="">何为电影</a></h4>
+                        <p class="description">悟道</p>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+    </section><!-- End About Us Section -->
+{% endblock %}

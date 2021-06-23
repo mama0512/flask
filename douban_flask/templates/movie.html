@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- ======= Our Team Section ======= -->
+    <section id="team" class="team">
+        <div class="container">
+
+            <div class="section-title">
+                <h2>豆瓣电影Top250电影</h2>
+            </div>
+
+            <!-- ======= Counts Section ======= -->
+            <section class="counts section-bg">
+                <div class="container">
+                    <table class="table table-striped">
+                        <tr>
+                            <td>排名</td>
+                            <td>电影中文名称</td>
+                            <td>电影外国名称</td>
+                            <td>评分</td>
+                            <td>评价人数</td>
+                            <td>一句话概述</td>
+                            <td>其他信息</td>
+                        </tr>
+                        {% for movie in movies %}
+                            <tr>
+                                <td>{{ movie[0] }}</td>
+                                <td>
+                                    <a href="{{ movie[1] }}" target="_blank">
+                                        {{ movie[3] }}
+                                    </a>
+                                </td>
+                                <td>{{ movie[4] }}</td>
+                                <td>{{ movie[5] }}</td>
+                                <td>{{ movie[6] }}</td>
+                                <td>{{ movie[7] }}</td>
+                                <td>{{ movie[8] }}</td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </section>
+        </div>
+    </section><!-- End Counts Section -->
+
+    </div>
+    </section><!-- End Our Team Section -->
+{% endblock %}

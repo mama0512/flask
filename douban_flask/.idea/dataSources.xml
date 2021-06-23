@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="@localhost" uuid="521a0840-b90d-468d-bcf2-e23aa0e28dca">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="movie.db" uuid="36d8420e-d23d-4fcc-9b28-ac90e53d811b">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/movie.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="test.db" uuid="ea0323e6-719c-4239-b2f9-8d3ecec28c01">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$USER_HOME$/Desktop/ma/git_codes/scrapyproject/sql/test.db</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="test1.db" uuid="9f29d1fd-55e9-4278-8be5-1aaedfcaf512">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$USER_HOME$/Desktop/ma/git_codes/scrapyproject/sql/test1.db</jdbc-url>
+    </data-source>
+  </component>
+</project>

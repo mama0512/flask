@@ -1,0 +1,47 @@
+{% extends'base.html' %}
+
+{% block title %}
+    Sign up
+{% endblock %}
+
+{% block head %}<link rel="stylesheet" href="{{url_for('static', filename='css/sign_in_up.css')}}">{% endblock %}
+
+{% block main %}
+
+    <form action="/sign_up" class="form-horizontal  form-container" action="" method="post">
+    <h3>Sign Up</h3>
+    <div class="form-group">
+    <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+    <div class="col-sm-10">
+        <input type="email" class="form-control" name='email' id='email'  placeholder="Email">
+
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="username" class="col-sm-2 control-label ">UserName</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" name="username" id='username' placeholder="UserName">
+
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-10">
+        <input type="password" class="form-control" name="password1" id="password1" pattern="[a-zA-Z1-9]\w{5,17}" placeholder="Password">
+
+    </div>
+  </div>
+    <div class="form-group">
+    <label for="inputPassword3" class="col-sm-2 control-label">Comfirm</label>
+    <div class="col-sm-10">
+     <input type="password" class="form-control" name="password2" id="password2" pattern="[a-zA-Z1-9]\w{5,17}" placeholder="Comfirm Password">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" value="Signup">Create Account</button>
+    </div>
+  </div>
+</form>
+{% endblock %}

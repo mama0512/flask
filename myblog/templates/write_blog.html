@@ -1,0 +1,24 @@
+{% extends'base.html' %}
+
+{% block title %}
+    Write Blog
+{% endblock %}
+
+{% block head %}<link rel="stylesheet" href="{{url_for('static', filename='css/write_blog.css')}}">{% endblock %}
+
+{% block main %}
+    <h3>Write my blog</h3>
+    <form action="/write_blog" class="form-horizontal" method="post">
+    <div class="form-container">
+        <div class="form-group">
+            <input type="text" placeholder="Please enter title" name="title" class="form-control">
+        </div>
+         <div class="form-group">
+             <textarea name="content" rows="10" class="form-control" placeholder="Please enter content"></textarea>
+        </div>
+         <div class="form-group">
+             <button class="btn btn-primary">Post</button>
+        </div>
+    </div>
+   </form>
+{% endblock %}
